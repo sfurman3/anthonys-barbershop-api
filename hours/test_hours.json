@@ -1,0 +1,1 @@
+{"title":"Test Hours","active":true,"generic_hours":[{"weekday":2,"start_time":{"hours":9,"minutes":0},"end_time":{"hours":19,"minutes":0},"is_closed":false}],"specific_hours":[{"start_time":"2018-12-25T00:00:00-05:00","end_time":"2018-12-25T00:00:00-05:00","is_closed":true},{"start_time":"2018-12-26T15:00:00Z","end_time":"2018-12-27T18:00:00Z","is_closed":false}]}

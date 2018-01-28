@@ -1,0 +1,8 @@
+{
+    "title": "New Years Hours",
+    "active": true,
+    "generic_hours": [],
+    "specific_hours": [
+        {"start_time": "2017-12-31T16:00:00.000Z", "end_time": "2018-01-01T17:00:00.000Z", "is_closed": false}
+    ]
+}

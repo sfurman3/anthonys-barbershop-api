@@ -1,0 +1,9 @@
+{
+    "title": "Christmas Hours",
+    "active": true,
+    "generic_hours": [],
+    "specific_hours": [
+        {"start_time": "2018-12-25T00:00:00-05:00", "end_time": "2018-12-25T00:00:00-05:00", "is_closed": true},
+        {"start_time": "2018-12-26T15:00:00.000Z", "end_time": "2018-12-27T18:00:00.000Z", "is_closed": false}
+    ]
+}

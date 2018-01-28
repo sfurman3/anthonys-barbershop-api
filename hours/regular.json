@@ -1,0 +1,14 @@
+{
+    "title": "Business Hours",
+    "active": true,
+    "generic_hours": [
+        {"weekday": 2, "start_time": {"hours": 9, "minutes": 0}, "end_time": {"hours": 19, "minutes": 0}},
+        {"weekday": 3, "start_time": {"hours": 9, "minutes": 0}, "end_time": {"hours": 19, "minutes": 0}},
+        {"weekday": 4, "start_time": {"hours": 9, "minutes": 0}, "end_time": {"hours": 19, "minutes": 0}},
+        {"weekday": 5, "start_time": {"hours": 9, "minutes": 0}, "end_time": {"hours": 19, "minutes": 0}},
+        {"weekday": 6, "start_time": {"hours": 8, "minutes": 0}, "end_time": {"hours": 16, "minutes": 0}},
+        {"weekday": 0, "is_closed": true},
+        {"weekday": 1, "is_closed": true}
+    ],
+    "specific_hours": []
+}
