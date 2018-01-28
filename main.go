@@ -8,7 +8,6 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/unrolled/secure"
 )
 
 // HttpStatus represents the an http status code.
@@ -37,18 +36,18 @@ func main() {
 
 	// set up logging
 	logName := fmt.Sprintf("/root/logs/anthonys-barbershop-api/log%d.log", time.Now().Unix())
-	logFile, err := os.OpenFile(logName, os.O_RDWR | os.O_CREATE | os.O_APPEND, 0644)
+	logFile, err := os.OpenFile(logName, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0644)
 	if err != nil {
-	    log.Fatalf("error opening file: %v", err)
+		log.Fatalf("error opening file: %v", err)
 	}
 	defer logFile.Close()
 
 	log.SetOutput(logFile)
 
 	ginLogName := fmt.Sprintf("/root/logs/anthonys-barbershop-api/gin-log%d.log", time.Now().Unix())
-	ginLogFile, err := os.OpenFile(ginLogName, os.O_RDWR | os.O_CREATE | os.O_APPEND, 0644)
+	ginLogFile, err := os.OpenFile(ginLogName, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0644)
 	if err != nil {
-	    log.Fatalf("error opening file: %v", err)
+		log.Fatalf("error opening file: %v", err)
 	}
 	defer ginLogFile.Close()
 	gin.DefaultWriter = io.MultiWriter(ginLogFile)
