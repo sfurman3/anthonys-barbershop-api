@@ -123,12 +123,10 @@ func getHours(c *gin.Context) ([]string, HttpStatus) {
 	readAllNames := 0
 	hoursFileNames, err := hoursDirFile.Readdirnames(readAllNames)
 	if err != nil {
-		// TODO: LOG -> Failed to read the names of all hours files.
 		log.Println(err)
 		return nil, http.StatusInternalServerError
 	}
 	if len(hoursFileNames) == 0 {
-		// TODO: test this case
 		log.Println("No hours")
 		return nil, http.StatusNotFound
 	}
@@ -252,7 +250,6 @@ func PutHours(c *gin.Context) {
 	err := c.ShouldBindJSON(&hours)
 	if err != nil {
 		log.Println(err)
-		// TODO: test / replace with your error format
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 	}
 
@@ -277,9 +274,7 @@ func PutHours(c *gin.Context) {
 	otherPerms := r__
 	err = ioutil.WriteFile(fname, data, os.FileMode(userPerms|groupPerms|otherPerms))
 	if err != nil {
-		// TODO: log the err
 		log.Println(err)
-		// TODO: better error response?
 		status := http.StatusInternalServerError
 		detail := fmt.Sprintf(INT_SERVR_FMT, c.Request.URL.Path)
 		c.JSON(status, NewError(c, status, detail))
