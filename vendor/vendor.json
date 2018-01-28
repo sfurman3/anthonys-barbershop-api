@@ -25,6 +25,12 @@
 			"versionExact": "v1.2"
 		},
 		{
+			"checksumSHA1": "woO1qIxIeQ1bcbPSiMfAKk3r4xg=",
+			"path": "github.com/gin-gonic/gin/json",
+			"revision": "783c7ee9c14eac0e65b501664b4f553291556b43",
+			"revisionTime": "2018-01-26T03:46:11Z"
+		},
+		{
 			"checksumSHA1": "O+2Q4Uc9Vidvc/ctORliL315ZVI=",
 			"path": "github.com/gin-gonic/gin/render",
 			"revision": "783c7ee9c14eac0e65b501664b4f553291556b43",
@@ -45,6 +51,12 @@
 			"revisionTime": "2017-11-29T19:10:14Z",
 			"version": "0.2",
 			"versionExact": "0.2"
+		},
+		{
+			"checksumSHA1": "6L/3XPIhlmbIX4AMgW8UnguuyWo=",
+			"path": "github.com/json-iterator/go",
+			"revision": "bca911dae0735b8220ddb30236e11cff9d959f19",
+			"revisionTime": "2018-01-28T14:27:09Z"
 		},
 		{
 			"checksumSHA1": "w5RcOnfv5YDr3j2bd1YydkPiZx4=",
