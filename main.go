@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"net/http"
 	"os"
 	"time"
 
@@ -29,6 +30,10 @@ type HttpStatus int
 //	ContentSecurityPolicy: "script-src $NONCE",
 //	PublicKey:             `pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubdomains; report-uri="https://www.example.com/hpkp-report"`,
 //}
+
+type ApisResponse struct{
+	Apis []string `json:"apis"`
+}
 
 func main() {
 	// set mode to 'release'
@@ -74,6 +79,11 @@ func main() {
 	// TODO: REMOVE?
 	router.Use(func(c *gin.Context) { c.Writer.Header().Set("Access-Control-Allow-Origin", "*") })
 
+	router.GET("/", func (c *gin.Context) {
+		c.JSON(http.StatusOK, ApisResponse{
+			Apis: []string{"/hours"},
+		})
+	})
 	router.GET("/hours", GetHours)
 	router.GET("/hours/findActive", GetActiveHours)
 	router.GET("/hours/findByName/:name", GetHoursByName)
